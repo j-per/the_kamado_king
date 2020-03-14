@@ -1,0 +1,45 @@
+.cardWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 300px;
+    min-height: 375px;
+    max-height: 375px;
+    border-radius:  .5rem;
+    text-decoration: none;
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.74);
+    margin: 1rem;
+}
+
+.image {
+    height: 60%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: .5rem .5rem 0 0;
+}
+
+.textWrapper {
+    padding: 0 1rem;
+    min-height: 40%;
+}
+
+.p {
+    margin: 0;
+    color: rgb(138, 138, 138);
+    text-transform: uppercase
+}
+
+.h3 {
+    margin: .3rem 0;
+    color: black;
+    font-weight: bold;
+}
+
+.author {
+    color: rgb(138, 138, 138);
+    margin: 0;
+}
+
+.b {
+    color: #333;
+}
