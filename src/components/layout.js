@@ -4,11 +4,9 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import BurgerMenu from "./burgermenu"
-import './layout.css'
+import "./layout.css"
 
 const Layout = ({ children }) => {
-
-
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -21,9 +19,12 @@ const Layout = ({ children }) => {
 
   return (
     <>
-    <BurgerMenu />
-    <Header siteTitle={data.site.siteMetadata.title} />
-    <main>{children}</main>
+      <BurgerMenu />
+      <Header
+        siteTitle={data.site.siteMetadata.title}
+        homepage={children[0] ? true : false}
+      />
+      <main>{children}</main>
     </>
   )
 }
