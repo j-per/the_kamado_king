@@ -9,8 +9,11 @@ class BurgerMenu extends React.Component {
   render() {
     return (
       <Menu right>
+        <Link to="/" className="menu-item">
+          Home
+        </Link>
         <Link to="/recipes" className="menu-item">
-          All Recipes
+          My Recipes
         </Link>
         <Link to="/gear" className="menu-item">
           Gear

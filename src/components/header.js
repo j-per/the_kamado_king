@@ -5,6 +5,7 @@ import PropTypes from "prop-types"
 import styles from "./header.module.scss"
 //If it's the index page, show the full thing otherwise make it smaller
 const Header = props => {
+  console.log(props.siteTitle);
   return (
     <header
       className={styles.homePageWrapper}

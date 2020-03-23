@@ -6,7 +6,7 @@ import AllRecipes from "../components/allRecipes"
 const Recipes = () => {
     return (
         <div>
-            <SEO title='recipes' />
+            <SEO title='Recipes' />
             <AllRecipes />
         </div>
     )

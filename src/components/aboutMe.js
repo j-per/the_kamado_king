@@ -7,7 +7,7 @@ const AboutMe = () => {
 
     return (
         <section className={styles.aboutMeWrapper}>
-            <h2>Hey, I'm Jesse and I love cooking on my Kamado Joe.</h2>
+            <h2>Hey, I'm Jesse and I love cooking on my Kamado Joe</h2>
             <p>I started making videos on my Kamado Joe in 2019 and fell in love with it.</p>
             <p>I decided to build this website to share my recipes with the world.</p>
             <p>Go check out my <b>Instagram: </b></p>

@@ -58,14 +58,14 @@ const AllRecipes = props => {
   return (
     <Layout>
       <section className={styles.allRecipesWrapper}>
-        <h2 className={styles.allRecipesHeading}>All Recipes</h2>
+        <h2 className={styles.allRecipesHeading}>My Recipes</h2>
         <div className={styles.selectWrapper}>
           <Select
             isClearable
             value={selectedOption}
             onChange={handleChange}
             options={options}
-            placeholder="Filter Options"
+            placeholder="Filter Options..."
           />
         </div>
         <div className={styles.recipeSectionWrapper}>

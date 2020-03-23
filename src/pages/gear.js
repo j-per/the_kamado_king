@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 const Gear = () => {
     return (
         <Layout>
-            <SEO title="gear" />
+            <SEO title="Gear" />
             <h1>This is the gear page</h1>
         </Layout>
     )
