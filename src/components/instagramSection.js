@@ -1,52 +1,39 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import InstagramCard from "./instagramCard"
 
+import styles from "./instagramSection.module.scss"
+
 const InstagramSection = () => {
-  const data = useStaticQuery(graphql`
-    query InstagramQuery {
-        allInstaNode {
-          edges {
-            node {
-              id
-              likes
-              comments
-              mediaType
-              preview
-              original
-              timestamp
-              caption
-              localFile {
-                childImageSharp {
-                  fixed(width: 250, height: 250) {
-                    ...GatsbyImageSharpFixed
-                  }
-                }
-              }
-              # Only available with the public api scraper
-              thumbnails {
-                src
-                config_width
-                config_height
-              }
-              dimensions {
-                height
-                width
+
+  const instagramPosts = useStaticQuery(graphql`
+  query InstagramPostsQuery {
+    allInstaNode(limit: 8, sort: {fields: id, order: ASC}) {
+      edges {
+        node {
+          likes
+          localFile {
+            childImageSharp {
+              fixed(height: 150, width: 150){
+                ...GatsbyImageSharpFixed
               }
             }
           }
         }
-      }     
+      }
+    }
+  }
     `)
+
   return (
-    <section>
-      <h1>Instagram Section</h1>
-      {data.allInstaNode.edges.map(node => {
-        return (
-          <InstagramCard style={{ margin: "0", padding: "0" }} test={node} />
-        )
-      })}
+    <section className={styles.instaSection}>
+      <div className={styles.instaCardWrapper}>
+        {
+          instagramPosts.allInstaNode.edges.map(edge => <InstagramCard posts={edge} />)
+        }
+      </div>
     </section>
   )
 }

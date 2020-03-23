@@ -1,24 +1,17 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 
 import styles from "./recipeCard.module.scss"
 
-const RecipeCard = ({ edge }) => {
-  const [hover, setHover] = useState(false)
+const RecipeCard = (props) => {
+
   return (
-    <Link
-      to={`recipes/${edge.node.slug}`}
-      onMouseOver={() => setHover(true)}
-      onMouseOut={() => setHover(false)}
-      onFocus={() => setHover(true)}
-      onBlur={() => setHover(false)}
-      className={styles.cardWrapper}
-    >
-      <Img className={styles.image} fluid={edge.node.previewImage.fluid} />
+    <Link to={`recipes/${props.edge.node.slug}`} className={styles.cardWrapper}>
+      <Img className={styles.image} fluid={props.edge.node.previewImage.fluid} />
       <div className={styles.textWrapper}>
         <p className={styles.p}>Recipe</p>
-        <h3 className={styles.h3}>{edge.node.recipeTitle}</h3>
+        <h3 className={styles.h3}>{props.edge.node.recipeTitle}</h3>
         <p className={styles.author}>
           by <b className={styles.b}>Jesse Perdue</b>
         </p>

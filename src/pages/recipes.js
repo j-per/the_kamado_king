@@ -1,14 +1,14 @@
 import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo"
-import RecipeCardLayout from "../components/recipeCardLayout"
+import AllRecipes from "../components/allRecipes"
 
 const Recipes = () => {
     return (
-        <Layout>
+        <div>
             <SEO title='recipes' />
-            <RecipeCardLayout allRecipes title="All Recipes" />
-        </Layout>
+            <AllRecipes />
+        </div>
     )
 }
 
