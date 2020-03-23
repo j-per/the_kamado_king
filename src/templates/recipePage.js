@@ -1,4 +1,5 @@
 import React from "react"
+import Img from "gatsby-image"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS } from "@contentful/rich-text-types"
 import {
@@ -37,7 +38,6 @@ const RecipePage = props => {
   }
 
   const socialURL = `https://thekamadoking.com/recipes/${props.pageContext.slug}`
-  console.log(socialURL)
 
   return (
     <Layout>
@@ -76,6 +76,7 @@ const RecipePage = props => {
               <PinterestShareButton
                 url={socialURL}
                 className={styles.socialIcon}
+                media={props.pageContext.previewImage}
               >
                 <PinterestIcon size={42} round={true} />
               </PinterestShareButton>
