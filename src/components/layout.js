@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Navigation from "./navigation"
@@ -17,15 +18,14 @@ const Layout = ({ children }) => {
       }
     }
   `)
-  console.log(children);
+  console.log(children)
   return (
     <>
-    <BurgerMenu />
-    <Navigation
-      siteTitle={data.site.siteMetadata.title}
-    />
-    <main>{children}</main>
-    <Footer />
+      <Helmet title={data.site.siteMetadata.title}>/></Helmet>
+      <BurgerMenu />
+      <Navigation siteTitle={data.site.siteMetadata.title} />
+      <main>{children}</main>
+      <Footer />
     </>
   )
 }

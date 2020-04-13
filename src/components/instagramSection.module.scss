@@ -1,19 +1,28 @@
 .instaCardWrapper {
-background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-// background-color: #fff;
-box-shadow: 0 0 10px rgb(0, 0, 0.74);
-   display: grid;
-   grid-template-columns: repeat(4, 160px);
-   width: fit-content;
-   padding: .5rem;
-   justify-items: center;
-   margin: 0 auto;
-   margin-bottom: 2.5rem;
-   padding-top: .75rem;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  // background-color: #fff;
+  box-shadow: 0 0 10px rgb(0, 0, 0.74);
+  display: grid;
+  grid-template-columns: repeat(4, 160px);
+  width: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  padding: 0.5rem;
+  justify-items: center;
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+  padding-top: 0.75rem;
 }
 
 @media only screen and (max-width: 768px) {
-   .instaCardWrapper {
-       grid-template-columns: repeat(2, 160px);
-   }
+  .instaCardWrapper {
+    grid-template-columns: repeat(2, 160px);
   }
+}

@@ -1,52 +1,52 @@
 .cardWrapper {
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    height: 375px;
-    border-radius:  .5rem;
-    text-decoration: none;
-    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.74);
-    transition: 250ms;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 375px;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.74);
+  transition: 250ms;
 }
 
 .cardWrapper:hover {
-    box-shadow: 0 8px 16px -4px rgb(0, 0, 0);
+  box-shadow: 0 8px 16px -4px rgb(0, 0, 0);
 }
 
 .image {
-    height: 60%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: .5rem .5rem 0 0;
+  height: 60%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .textWrapper {
-    padding: 1rem 1rem;
-    min-height: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  padding: 1rem 1rem;
+  min-height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .p {
-    margin: 0;
-    color: rgb(138, 138, 138);
-    text-transform: uppercase;
-    text-decoration: underline;
+  margin: 0;
+  color: rgb(138, 138, 138);
+  text-transform: uppercase;
+  text-decoration: underline;
 }
 
 .h3 {
-    margin: .3rem 0;
-    color: black;
-    font-weight: bold;
+  margin: 0.3rem 0;
+  color: black;
+  font-weight: bold;
 }
 
 .author {
-    color: rgb(138, 138, 138);
-    margin: 0;
+  color: rgb(138, 138, 138);
+  margin: 0;
 }
 
 .b {
-    color: #333;
+  color: #333;
 }
